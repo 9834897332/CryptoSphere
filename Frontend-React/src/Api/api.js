@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 
-const LOCALHOST='https://treading-platform.onrender.com:5454'
+const LOCALHOST='https://treading-platform.onrender.com'
 
 
 export const API_BASE_URL = LOCALHOST
