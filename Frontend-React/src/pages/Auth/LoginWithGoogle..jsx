@@ -6,7 +6,7 @@ const LoginWithGoogle = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      const response = await fetch('https://13.49.246.42:5454/login/google');
+      const response = await fetch('https://treading-platform.onrender.com/login/google');
       const data = await response.json();
       // Check if token exists in response
       if (data.token) {
