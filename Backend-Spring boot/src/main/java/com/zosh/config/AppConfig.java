@@ -91,8 +91,8 @@ public class AppConfig {
 			        "http://localhost:5174",
 	                    "http://localhost:4200",
 
-			   "https://cryptosphere-ksk-project.vercel.app/",
-				"https://crypto-sphere.s3-website.eu-north-1.amazonaws.com"
+			   "https://cryptosphere-ksk-project.vercel.app/"
+				
 
 	                ));
 	                cfg.setAllowedMethods(Collections.singletonList("*"));
