@@ -1,6 +1,12 @@
 
 import axios from 'axios';
 
+const cors = require("cors");
+
+const app = express();
+app.use(cors({
+  origin:"https://cryptosphere-dun.vercel.app/"
+}));
 
 const LOCALHOST='https://treading-platform.onrender.com'
 
