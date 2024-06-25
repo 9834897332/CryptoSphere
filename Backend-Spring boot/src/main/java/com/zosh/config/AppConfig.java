@@ -18,6 +18,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -83,7 +84,7 @@ public class AppConfig {
                 "http://localhost:4200",
                 "https://cryptosphere-dun.vercel.app"
         ));
-        configuration.setAllowedMethods(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Collections.singletonList("*"));
         configuration.setExposedHeaders(Arrays.asList("Authorization"));
         configuration.setAllowCredentials(true);
@@ -92,6 +93,11 @@ public class AppConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
+    }
+
+    @Bean
+    public CorsFilter corsFilter() {
+        return new CorsFilter(corsConfigurationSource());
     }
 
     @Bean
