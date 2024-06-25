@@ -5,7 +5,7 @@ import { defineConfig } from "vite"
 export default defineConfig({
   server:{
     proxy: {
-      '/api': 'https://cryptosphere-dun.vercel.app'
+      '/api': 'https://treading-platform.onrender.com'
     }
   },
   plugins: [react()],
