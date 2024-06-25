@@ -28,7 +28,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 
 @Configuration
-@CrossOrigin("*")
+
 public class AppConfig {
 	
 	    @Bean
