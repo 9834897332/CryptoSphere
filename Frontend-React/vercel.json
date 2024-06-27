@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "treading-plateform-0.0.1-SNAPSHOT.jarr",
+            "src": "api.js",
             "use": "@vercel/java"
         }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "treading-plateform-0.0.1-SNAPSHOT.jar",
+            "dest": "api.js",
             "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
             "headers": {
                 "Access-Control-Allow-Origin": "*"
