@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "https://cryptosphere.onrender.com",
+            "src": "https://cryptosphere-dun.vercel.app",
             "use": "@vercel/java"
         }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "https://cryptosphere.onrender.com",
+            "dest": "https://cryptosphere-dun.vercel.app",
             "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
             "headers": {
                 "Access-Control-Allow-Origin": "*"
