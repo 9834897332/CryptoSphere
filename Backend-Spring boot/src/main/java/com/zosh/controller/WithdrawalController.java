@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "https://cryptosphere-dun.vercel.app")
 public class WithdrawalController {
 
     @Autowired
