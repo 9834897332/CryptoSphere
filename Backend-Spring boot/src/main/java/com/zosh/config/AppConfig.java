@@ -95,7 +95,7 @@ public class AppConfig {
 	                    "http://localhost:5173",
 						"http://localhost:5174",
 	                    "http://localhost:4200",
-							"https://cryptosphere-dun.vercel.app"
+							"https://cryptosphere2.onrender.com"
 	                ));
 	                cfg.setAllowedMethods(Collections.singletonList("*"));
 	                cfg.setAllowCredentials(true);
