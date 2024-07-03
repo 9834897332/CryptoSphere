@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/watchlist")
+
 public class WatchlistController {
     private final WatchlistService watchlistService;
     private final UserService userService;

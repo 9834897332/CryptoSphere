@@ -1,10 +1,7 @@
 package com.zosh.config;
-
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -36,7 +33,7 @@ public class AppConfig {
 
 	        http.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 	                .authorizeHttpRequests(Authorize -> Authorize
-               		.requestMatchers("/api/admin/**").hasRole("ADMIN")
+               		//.requestMatchers("/api/admin/**").hasRole("ADMIN")
 	                                .requestMatchers("/api/**").authenticated()
 	                                .anyRequest().permitAll()
 	                )
@@ -46,9 +43,9 @@ public class AppConfig {
 								authorization.baseUri("/login/oauth2/authorization"));
 						oauth.successHandler(new AuthenticationSuccessHandler() {
 
-							@Override
-							public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-																Authentication authentication) throws IOException, ServletException {
+						@Override
+						public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+											Authentication authentication) throws IOException, ServletException {
 
 								if(authentication.getPrincipal() instanceof DefaultOAuth2User) {
 									DefaultOAuth2User userDetails = (DefaultOAuth2User) authentication.getPrincipal();
@@ -90,11 +87,7 @@ public class AppConfig {
 	            public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
 	                CorsConfiguration cfg = new CorsConfiguration();
 	                cfg.setAllowedOrigins(Arrays.asList(
-	                    "http://localhost:3000",
-	                    "http://localhost:5173",
-						"http://localhost:5174",
-	                    "http://localhost:4200",
-							"https://cryptosphere2.onrender.com"
+	                    "*"
 	                ));
 	                cfg.setAllowedMethods(Collections.singletonList("*"));
 	                cfg.setAllowCredentials(true);

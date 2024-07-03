@@ -30,6 +30,7 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/auth")
+
 public class AuthController {
 
 	@Autowired

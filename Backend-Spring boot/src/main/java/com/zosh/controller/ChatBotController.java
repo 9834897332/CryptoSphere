@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController()
 @RequestMapping("/chat")
+
 public class ChatBotController {
 
     @Autowired
