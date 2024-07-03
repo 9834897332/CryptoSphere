@@ -2,10 +2,11 @@
 import axios from 'axios';
 
 
-const LOCALHOST='https://cryptosphere.onrender.com'
+const LOCALHOST='https://treading-platform-2.onrender.com'
 
 
 export const API_BASE_URL = LOCALHOST
+
 
 const api = axios.create({
   baseURL: API_BASE_URL,
