@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 
-const LOCALHOST='https://localhost:5454'
+const LOCALHOST='https://cryptosphere.onrender.com'
 
 
 export const API_BASE_URL = LOCALHOST
